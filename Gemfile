@@ -13,7 +13,7 @@ gem 'unicorn'
 
 group :production do
   gem 'puma'
- gem "pg", "~> 0.15.1"
+  gem "pg", "~> 0.15.1"
 end
 
 gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git', :branch => '1-0-stable'
