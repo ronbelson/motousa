@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130528121549) do
+ActiveRecord::Schema.define(:version => 20130530142117) do
 
   create_table "shipping_methods_zones", :id => false, :force => true do |t|
     t.integer "shipping_method_id"
@@ -100,6 +100,16 @@ ActiveRecord::Schema.define(:version => 20130528121549) do
 
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_authentication_methods", :force => true do |t|
+    t.string   "environment"
+    t.string   "provider"
+    t.string   "api_key"
+    t.string   "api_secret"
+    t.boolean  "active"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
@@ -265,6 +275,27 @@ ActiveRecord::Schema.define(:version => 20130528121549) do
   end
 
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
+
+  create_table "spree_pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "slug"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.boolean  "show_in_header",           :default => false, :null => false
+    t.boolean  "show_in_footer",           :default => false, :null => false
+    t.string   "foreign_link"
+    t.integer  "position",                 :default => 1,     :null => false
+    t.boolean  "visible",                  :default => true
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.string   "layout"
+    t.boolean  "show_in_sidebar",          :default => false, :null => false
+    t.string   "meta_title"
+    t.boolean  "render_layout_as_partial", :default => false
+  end
+
+  add_index "spree_pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"
@@ -691,6 +722,14 @@ ActiveRecord::Schema.define(:version => 20130528121549) do
     t.boolean  "active",       :default => true
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "spree_user_authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_users", :force => true do |t|

@@ -30,7 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails' 
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -51,9 +51,12 @@ gem "spree", :github => "spree/spree", :branch => "2-0-stable"
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
 gem 'spree_i18n', :github => "spree/spree_i18n" , :branch => '3-0-stable'
+gem 'spree_fancy', :git => 'git://github.com/spree/spree_fancy.git' , :branch => '2-0-stable'
+gem "spree_social", :git => "git://github.com/spree/spree_social.git"
+gem 'spree_static_content', :github => 'spree/spree_static_content' , :branch => "2-0-stable"
+
 #gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 #gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
-gem 'spree_fancy', :git => 'git://github.com/spree/spree_fancy.git' , :branch => '2-0-stable'
 
 
 
