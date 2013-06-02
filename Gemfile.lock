@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: dd65891584779939b4aec994410102c9802d8590
+  revision: 7ed6241e896ba79ba3e23e9ecb31d148f2429f1a
   branch: 2-0-stable
   specs:
     spree (2.0.0)
@@ -89,7 +89,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_social.git
-  revision: a454b6e8c43003c5cea6b392ed3f5404bb4f03dd
+  revision: c0648205d644f52879737ac6d88302758cebe645
   specs:
     spree_social (2.3.0)
       oa-core
@@ -98,19 +98,19 @@ GIT
       omniauth-github
       omniauth-google-oauth2
       omniauth-twitter
-      spree_core (~> 2.0.0.beta)
+      spree_core (~> 2.0.0)
 
 GIT
   remote: git://github.com/spree/spree_static_content.git
-  revision: aabc3c08719c986831f602ae2f3e6431ba8326e8
+  revision: 839e76ed75df2505c1a6d42f2d25fb1c2f3800d3
   branch: 2-0-stable
   specs:
     spree_static_content (1.1.0.beta)
-      spree_core (~> 2.0.0.beta)
+      spree_core (~> 2.0.0)
 
 GIT
   remote: https://github.com/spree/spree_auth_devise.git
-  revision: 9d81c710d8cf5c8d652db38945bebd577b847825
+  revision: 1b571e1be0daf8b8ee3fe4792ded8cd8e4fc4d0f
   branch: 2-0-stable
   specs:
     spree_auth_devise (2.0.0)
@@ -148,7 +148,7 @@ GEM
     active_utils (1.0.5)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.32.1)
+    activemerchant (1.33.0)
       active_utils (>= 1.0.2)
       activesupport (>= 2.3.14)
       builder (>= 2.0.0)
@@ -255,7 +255,7 @@ GEM
     mime-types (1.23)
     money (5.1.1)
       i18n (~> 0.6.0)
-    multi_json (1.7.4)
+    multi_json (1.7.5)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
     nokogiri (1.5.9)
