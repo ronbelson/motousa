@@ -1,0 +1,41 @@
+<% content_for :subheader do %>
+  <%= render 'slider' %>
+<% end %>
+
+<div id="welcome-message">
+  <div class="container">
+    <h1 style="text-align:right;float:right;direction:rtl">
+      <a href="/products">MotoUsa.co.il</a>
+ מביאים לך את הציוד ישירות מארה"ב בדיוור ישיר כולל כל העלויות עד הדלת עם אחריות
+   
+      בחר
+ <a href="/products">כל מוצר שתרצה</a> ואנחנו נביא לך מארהב עד הדלת <a href="/products">במחיר סופי לכל מקום בארץ</a>
+    </h1>
+  </div>
+</div>
+
+<div class="container">
+  <% if @featured_products %>
+    <div id="featured-products" class="row">
+      <h3 style="clear;direction:rtl;">מוצרים מומלצים</h3>
+      <hr>
+      <ul class="carousel">
+        <% @featured_products.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @latest_products %>
+    <div id="latest-products" class="row">
+      <h3 style="clear;direction:rtl;">מוצרים חדשים</h3>
+      <hr>
+      <ul class="carousel">
+        <% @latest_products.sort_by{ |product| product.created_at }.reverse.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

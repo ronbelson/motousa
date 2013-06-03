@@ -273,7 +273,7 @@ en:
             add_state: Add State
             add_stock: Add Stock
             add_stock_management: Add Stock Management
-            add_to_cart: Add To Basket
+            add_to_cart: הוסף לסל
             add_variant: Add Variant
             additional_item: Additional Item Cost
             address1: Address
@@ -365,7 +365,7 @@ en:
             card_code: Card Code
             card_number: Card Number
             card_type_is: Card type is
-            cart: סל קניות
+            cart: סל
             categories: Categories
             category: Category
             check_for_spree_alerts: Check for Spree alerts
@@ -479,7 +479,7 @@ en:
             editing_user: Editing User
             editing_zone: Editing Zone
             email: דואר אלקטרוני
-            empty: empty
+            empty: --
             empty_cart: סל ריק
             enable_mail_delivery: Enable Mail Delivery
             end: סוף
